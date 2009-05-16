@@ -1,0 +1,26 @@
+* Stop sea model from coming through terrain models:
+
+  Instead of placing one sea model under the terrain models, put eight around
+  them.
+  
+* Implement path-following steering behaviour with polyline path
+
+* Implement pathfinding algorithm, and occupied/unnocuppied grid representation
+  of terrain with trees, buildings, lakes etc. being occupied
+  
+* Put a blue, textured, transparent plane through the terrain as water for
+  lakes. If any vertex of a quad is below the level of this plane then the
+  quad is occupied by a lake
+  
+* Implement non-penetration steering constraint for collision spheres, for
+  occupied quads
+  
+* Add some buildings to the scene
+
+* Add mavasher's birds to the scene
+
+* Fix bug with wander steering hugging obstacles and containers
+
+* Add GUI stuff
+
+* Add objects for the characters to pick up

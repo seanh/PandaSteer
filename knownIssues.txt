@@ -1,0 +1,70 @@
+#
+
+Characters tend to weave their way through groups of trees instead of going
+around them when wondering, and often don't take the shortest path when
+arriving because they randomly weave through trees.
+
+Add a path-following steering behaviour to vehicle.py, and add a demo of it to
+plugins/ for pandaSteer.py.
+
+In terrain.py, represent the terrain as a dictionary with one key for each quad
+and links to each of the quads neighbors as the values. Whenever there is a
+tree (or other obstacle) on a quad it is marked 'occupied.' You can then
+compute paths from quad A to quad B by running a simple pathfinding algorithm
+over the graph.
+
+Arrival steering could consist of computing the path from the nearest
+unoccupied quad to the nearest unoccupied quad to the target then following it.
+
+For wandering and other steering behaviours, add a 'non-penetration constraint'
+where vehicles will not enter occupied quads, but instead will slide along them.
+
+#
+
+Sometimes none of the trees seem to get added to the collision detection
+system. No collisions between characters' collision tubes and trees' collision
+spheres occur, characters walk right through trees. Framerate is much better :)
+
+Sometimes only _some_ of the trees get added to the collision system.
+
+Is this something to do with flattenStrong?
+
+#
+
+Currently the terrain models are raised above the sea to minimise unwanted
+lakes appearing where the terrain model dips below the sea model, but this
+makes the edges look weird. Put eight sea models around the terrain instead of
+one underneath it?
+
+#
+
+Deal with lakes:
+
+'Lakes' appear where the terrain model dips below some sea model like the sea
+model currently in use, or any blue plane with some transparency cutting
+through the terrain model.
+
+Characters are unaware of these lakes and walk right through them. Lakes could
+be made to look OK if the sea model had some transparency. And if pathfinding
+and penetration constraint where used, along with a binary occupied/unoccupied
+grid representation of the terrain, then it should be possible to get
+characters to stay out of lakes by automatically marking low quads of the
+terrain as occupied (look at all four vertices of a quad, if any of them is
+below sea level mark it occupied, do this before placing trees, then don't
+place trees in lakes!)
+
+#
+
+Sometimes something (like a character model) seems to get in the way of the
+camera. The camera then zooms in very far, or zooms in and out rapidly, until
+something moves. Could be very confusing for young users.
+
+#
+
+Sometimes character models fall under the terrain model. Could it be that the
+CollisionRay used with CollisionHandlerFloor is on rare occasions shooting
+right through a tiny gap in the terrain model? Though I don't see why there
+should be gaps in the terrain model, this problem did occur with placing trees,
+leading to code that 'wiggles' a tree until its ray hits some terrain. Maybe
+try using the characters collision sphere to detect the height of the terrain
+and set the Z accordingly? (i.e. don't use collisionhandlerfloor)
