@@ -4,62 +4,183 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-
-	<title>seanh/PandaSteer @ GitHub</title>
-	
+	<title>PandaSteer by seanh</title>
 	<style type="text/css">
-		body {
-  		margin-top: 1.0em;
-  		background-color: #392ac0;
-		  font-family: "Helvetica,Arial,FreeSans";
-  		color: #ffffff;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-		h1 { font-size: 3.8em; color: #c6d53f; margin-bottom: 3px; }
-		h1 .small { font-size: 0.4em; }
-		h1 a { text-decoration: none }
-		h2 { font-size: 1.5em; color: #c6d53f; }
-    h3 { text-align: center; color: #c6d53f; }
-    a { color: #c6d53f; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-		pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
+@charset utf-8;
+/**
+ * SenCSS - Sensible Standards CSS framework
+ *
+ * Copyright (c) 2008-2009 Kilian Valkhof (kilianvalkhof.com)
+ * Visit sencss.kilianvalkhof.com for more information and changelogs.
+ * Licensed under the MIT license. http://www.opensource.org/licenses/mit-license.php
+ *
+ */
+html,body,div,span,object,iframe,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,var,fieldset,form,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,dialog,figure,footer,header,hgroup,menu,nav,section,time,mark,audio,video{vertical-align:baseline;margin:0;padding:0}
+article,aside,dialog,figure,footer,header,hgroup,menu,nav,section,time,mark,audio,video {display:block}
+body{background:#fff;color:#000;font:100%/1.5em Arial, Helvetica, "DejaVu Sans", "Liberation sans", "Bitstream Vera Sans", sans-serif;position:relative}
+textarea{font:101%/1.5em Arial, Helvetica, "DejaVu Sans", "Liberation sans", "Bitstream Vera Sans", sans-serif;border:1px solid #ccc;border-bottom-color:#eee;border-right-color:#eee;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;width:100%;margin:0;padding:.29em 0}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+:focus{outline:none}
+a{text-decoration:underline;border:0}
+a:hover,a:focus{text-decoration:none}
+a img{border:0}
+abbr,acronym{border-bottom:1px dotted;cursor:help;font-variant:small-caps}
+address,cite,em,i{font-style:italic}
+blockquote p{margin:0 1.5em 1.5em;padding:.75em}
+code,kbd,tt{font-family:"Courier New", Courier, monospace, serif;line-height:1.5}
+del{text-decoration:line-through}
+dfn{border-bottom:1px dashed;font-style:italic}
+dl{margin:0 0 1.5em}
+dd{margin-left:1.5em}
+h1,h2,h3,h4,h5,h6{font-weight:700;padding:0}
+h1{font-size:2em;margin:0 0 .75em}
+h2{font-size:1.5em;margin:0 0 1em}
+h3{font-size:1.1666em;margin:0 0 1.286em}
+h4{font-size:1em;margin:0 0 1.5em}
+h5{font-size:.8333em;margin:0 0 1.8em}
+h6{font-size:.666em;margin:0 0 2.25em}
+img{display:inline-block;vertical-align:text-bottom}
+ins{text-decoration:overline}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:700}
+ol{list-style:outside decimal}
+p{font-weight:300;margin:0 0 1.5em}
+pre{font-family:"Courier New", Courier, monospace, serif;margin:0 0 1.5em}
+sub{top:.4em;font-size:.85em;line-height:1;position:relative;vertical-align:baseline}
+sup{font-size:.85em;line-height:1;position:relative;bottom:.5em;vertical-align:baseline}
+ul{list-style:outside disc}
+ul,ol{margin:0 0 1.5em 1.5em;padding:0}
+li ul,li ol{margin:0 0 1.5em 1.5em;padding:0}
+table{border-collapse:collapse;border-spacing:0;margin:0 0 1.5em;padding:0}
+caption{font-style:italic;text-align:left}
+tr.alt td{background:#eee}
+td{border:1px solid #000;vertical-align:middle;padding:.333em}
+th{font-weight:700;vertical-align:middle;padding:.333em}
+button{cursor:pointer;display:block;font-size:1em;height:2em;line-height:1.5em;margin:1.75em 0 0;padding:0 .5em}
+button::-moz-focus-inner{border:0}
+fieldset{border:0;position:relative;margin:0 0 1.5em;padding:1.5em 0 0}
+fieldset fieldset{clear:both;margin:0 0 1.5em;padding:0 0 0 1.5em}
+input{border:1px solid #ccc;border-bottom-color:#eee;border-right-color:#eee;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;font-size:1em;height:1.5em;line-height:1.5em;width:100%;margin:0 0 .75em;padding:.29em 0}
+input[type=file]{height:2.25em;padding:0}
+select{border:1px solid #ccc;border-bottom-color:#eee;border-right-color:#eee;font-size:1em;height:2.25em;_margin:0 0 1.3em;margin:0 0 .8em;padding:.2em 0 0}
+optgroup{font-weight:700;font-style:normal;text-indent:.2em}
+optgroup + optgroup{margin-top:1em}
+option{font-size:1em;height:1.5em;text-indent:1em;padding:0}
+label{cursor:pointer;display:block;height:auto;line-height:1.4em;width:100%;margin:0;padding:0}
+label input{background:0;border:0;height:1.5em;line-height:1.5em;width:auto;margin:0 .5em 0 0;padding:0}
+legend{font-size:1.1666em;font-weight:700;left:0;margin:0;padding:0}
+dt,strong,b{font-weight:700}
+.amp{font-family:Baskerville, "Goudy Old Style", Palatino, "Book Antiqua", "URW Chancery L", Gentium, serif;font-style:italic}
+.quo{font-family:Georgia, Gentium, "Times New Roman", Times, serif}
+.lquo{font-family:Georgia, Gentium, "Times New Roman", Times, serif;margin:0 0 0 -.55em}
+.introParagraphArticle:first-letter{float:left;font-size:3.2em;font-weight:700;line-height:1em;margin:0 0 -.2em;padding:.125em .1em 0 0}
+.message{background:#eee;border:1px solid #999;margin:1.5em;padding:.666em}
+.error{background:#fee;border:1px solid red;margin:1.5em;padding:.666em}
+.notice{background:#eef;border:1px solid #00f;margin:1.5em;padding:.666em}
+.success{background:#efe;border:1px solid #0f0;margin:1.5em;padding:.666em}
+.warning{background:#ffe;border:1px solid #ff0;margin:1.5em;padding:.666em}
+.aside-left{clear:left;float:left;overflow:hidden;margin:0 1.5em 1.5em 0}
+.aside-right{clear:right;float:right;overflow:hidden;margin:0 0 1.5em 1.5em}
+.horizontalForm button{clear:left;float:left;margin:.25em 0 0}
+.horizontalForm input,.horizontalForm textarea{float:left;width:49%;margin:0 0 .8em}
+.horizontalForm select{float:left;_margin:0 0 1.25em;margin:0 0 .75em}
+.horizontalForm label{clear:left;float:left;width:49%;padding:.375em 0}
+.horizontalForm label input{height:1em;line-height:1.5em;width:auto;margin:.25em .5em 0 0}
+.horizontalForm label.singleLine{clear:both;float:none;height:1.5em;width:100%;padding:0}
 	</style>
-	
+	<style type="text/css">
+body {
+	background-color: white;
+	font-family: "Helvetica,Arial,FreeSans";
+	color: #727373;
+}
+#container {
+	max-width:50em;
+	margin-left:auto;
+	margin-right:auto;
+}
+h1 a { text-decoration: none }
+.description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
+.download { float: right; }
+	</style>
+	<!-- 1. Include flowplayer javascript file that provides flash embedding
+	and flowplayer API. -->
+	<script src="flowplayer-3.2.2.min.js"></script>
 </head>
 
 <body>
-  <a href="http://github.com/seanh/PandaSteer"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+	<a href="http://github.com/seanh/PandaSteer"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
 
-  <div id="container">
+	<div id="container">
 
-    <div class="download">
-      <a href="http://github.com/seanh/PandaSteer/zipball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
-      <a href="http://github.com/seanh/PandaSteer/tarball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
-    </div>
+		<div class="download">
+			<a href="http://github.com/seanh/PandaSteer/zipball/master">
+				<img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
+			<a href="http://github.com/seanh/PandaSteer/tarball/master">
+				<img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
+		</div>
 
-    <h1><a href="http://github.com/seanh/PandaSteer">PandaSteer</a>
-      <span class="small">by <a href="http://github.com/seanh">seanh</a></span></h1>
+		<h1 style="font-size:300%; padding-top:1em;"><a href="http://github.com/seanh/PandaSteer">PandaSteer</a>
+		<span style="font-size:60%;">by <a href="http://github.com/seanh">seanh</a></span></h1>
 
-    <div class="description">
-      Autonomous steering behaviours and simple terrain generation for Panda3D.
-    </div>
+		<div class="description">
+			Autonomous steering behaviours and simple terrain generation for Panda3D.
+		</div>
 
-    <p>A plugin-based, reusable implementation of <a href="http://www.red3d.com/cwr/steer/">steering behaviours for autonomous characters</a> for the game engine <a href="http://www.panda3d.org/">Panda3D</a>. Also includes some simple terrain generation code based on the diamond-square algorithm and Perlin noise. This code requires Panda3D to be installed on your system. The 3D models included with the download are from the free set that you can download from panda3d.org.</p><h2>Dependencies</h2>
-<p><a href="http://www.panda3d.org/">Panda3D</a></p>
+		<!-- 2. The HTML element that will contain the video player. -->
+		<p><a
+			href="http://dl.dropbox.com/u/136038/screencast.flv"
+			style="display:block;width:600px;height:456px;margin:auto;"
+			id="player">
+		</a></p>
+		<!-- 3. Install flowplayer inside the container. This must be placed
+		after the container element. -->
+		<script language="JavaScript">
+			flowplayer("player", "flowplayer-3.2.2.swf");
+		</script>
+
+		<p><b>PandaSteer</b> is an <i>autonomous steering behaviours</i>
+		library for the game engine <a
+		href="http://www.panda3d.org/">Panda3D</a>. It gives characters in
+		Panda3D animations and games the ability to navigate a virtual world
+		smoothly and convincingly. For example, to get from A to B while
+		avoiding both static and moving obstacles, to chase or evade another
+		character, to follow a path, etc. The video playing above shows a
+		sequence of scenes from a small demonstration of some of PandaSteer's
+		steering behaviours.</p>
+
+		<p>PandaSteer is based on Craig Reynolds' GDC 1999 paper <a
+		href="http://www.red3d.com/cwr/steer/">Steering Behaviours For
+		Autonomous Characters</a>.
+		The 3D models included with the download are from the free
+		set that you can download from <a
+		href="http://www.panda3d.org/">panda3d.org</a>.</p>
+
+
+		<p>PandaSteer also includes a simple terrain generator that I
+		wrote in order to demonstrate PandaSteer. It uses the diamond-square
+		algorithm to generate the terrain and Perlin noise to place the
+		trees:</p>
+
+		<p><img src="scrot2.png" title="A screenshot of some terrain generated by PandaSteer's simple terrain generator." alt="A screenshot of some terrain generated by PandaSteer's simple terrain generator."/></p>
+
+	<h2>Download</h2>
+    <p>
+      You can download this project in either
+      <a href="http://github.com/seanh/PandaSteer/zipball/master">zip</a> or
+      <a href="http://github.com/seanh/PandaSteer/tarball/master">tar</a> formats.
+    </p>
+    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
+      by running:
+      <pre>$ git clone git://github.com/seanh/PandaSteer</pre>
+    </p>
+
+      <p>Browse the source code on GitHub : <a href="http://github.com/seanh/PandaSteer">seanh/PandaSteer</a>.
+    </p>
+
 <h2>Install</h2>
-<p>Run pandaSteer.py for a plugin-based steering behaviours demo.
+<p>First install <a href="http://www.panda3d.org/">Panda3D</a>, then download PandaSteer and run <code>pandaSteer.py</code> for a plugin-based steering behaviours demo. Run <code>terrain.py</code> for a demo of the terrain generator. Run <code>scene.py</code> for a demo 'game' scene combining the terrain generator and steering behaviours.</p>
 
-Run terrain.py for a demo of the terrain generator.
-
-Run scene.py for a demo 'game' scene combining the terrain generator and steering behaviours.</p>
 <h2>License</h2>
 <p>PandaSteer is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -74,27 +195,13 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with PandaSteer; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA</p>
+
 <h2>Authors</h2>
-<p>seanh<br/><br/>      </p>
 
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="http://github.com/seanh/PandaSteer/zipball/master">zip</a> or
-      <a href="http://github.com/seanh/PandaSteer/tarball/master">tar</a> formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/seanh/PandaSteer</pre>
-    </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="http://github.com/seanh/PandaSteer">seanh/PandaSteer</a>
-    </div>
+<p>seanh, with contributions from Panda3D forum members ynjh_jo,
+Thomas_egi, pro-rsoft, drwr, cyan, mavasher, Ffeuuell, zuck and
+astelix.</p>
 
   </div>
-
-  
 </body>
 </html>
