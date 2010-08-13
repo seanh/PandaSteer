@@ -1,110 +1,152 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<title>PandaSteer by seanh</title>
-	<link rel="stylesheet" type="text/css" media="all" href="http://seanh.github.com/portfolio.css" />
-	<!-- 1. Include flowplayer javascript file that provides flash embedding
-	and flowplayer API. -->
-	<script src="flowplayer-3.2.2.min.js"></script>
+<title>PandaSteer by seanh</title>
+<!-- 1. Include flowplayer javascript file that provides flash embedding
+and flowplayer API. -->
+<script type="text/javascript" src="flowplayer-3.2.2.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<link rel="stylesheet" type="text/css" media="all" href="http://seanh.github.com/portfolio.css">
+<!-- <link rel="stylesheet" type="text/css" media="aural" href="mystyle.css" > -->
+<!-- <link rel="stylesheet" type="text/css" media="braille" href="mystyle.css" > -->
+<!-- <link rel="stylesheet" type="text/css" media="embossed" href="mystyle.css" > -->
+<!-- <link rel="stylesheet" type="text/css" media="handheld" href="mystyle.css" > -->
+<!-- <link rel="stylesheet" type="text/css" media="print" href="mystyle.css" > -->
+<!-- <link rel="stylesheet" type="text/css" media="projection" href="mystyle.css" > -->
+<!-- <link rel="stylesheet" type="text/css" media="screen" href="mystyle.css" > -->
+<!-- <link rel="stylesheet" type="text/css" media="tty" href="mystyle.css" > -->
+<!-- <link rel="stylesheet" type="text/css" media="tv" href="mystyle.css" > -->
+<!-- <style type="text/css">
+</style> -->
 </head>
-
 <body>
-	<a href="http://github.com/seanh/PandaSteer"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
 
-	<div id="container">
+<!-- "Fork me on GitHub" ribbon. -->
+<div>
+	<a href="http://github.com/seanh/PandaSteer">
+		<img style="position: absolute; top: 0; right: 0; border: 0;"
+		     src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
+			 alt="Fork me on GitHub" >
+	</a>
+</div>
 
-		<div class="download">
-			<a href="http://github.com/seanh/PandaSteer/zipball/master">
-				<img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
-			<a href="http://github.com/seanh/PandaSteer/tarball/master">
-				<img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
-		</div>
+<div id="container">
 
-		<h1 style="font-size:300%; padding-top:1em;"><a href="http://github.com/seanh/PandaSteer">PandaSteer</a>
-		<span style="font-size:60%;">by <a href="http://github.com/seanh">seanh</a></span></h1>
+	<!-- ZIP and TAR download icons. -->
+	<div class="download">
+		<a href="http://github.com/seanh/PandaSteer/zipball/master">
+			<img title="Download this project in ZIP format."
+			     alt="Download this project in ZIP format."
+				 style="border:0;" width="90"
+				 src="http://github.com/images/modules/download/zip.png">
+		</a>
+		<a href="http://github.com/seanh/PandaSteer/tarball/master">
+			<img title="Download this project in TAR format."
+			     alt="Download this project in TAR format."
+				 style="border:0;" width="90"
+				 src="http://github.com/images/modules/download/tar.png">
+		</a>
+	</div>
 
-		<div class="description">
-			Autonomous steering behaviours and simple terrain generation for Panda3D.
-		</div>
+	<!-- Big title at the top of the page. -->
+	<h1 style="font-size:300%; padding-top:1em;">
+		<a href="http://github.com/seanh/PandaSteer">PandaSteer</a>
+		<span style="font-size:60%;">by <a href="http://github.com/seanh">seanh</a></span>
+	</h1>
 
-		<!-- 2. The HTML element that will contain the video player. -->
-		<p><a
-			href="screencast.flv"
-			style="display:block;width:600px;height:456px;margin:auto;"
-			id="player">
-		</a></p>
-		<!-- 3. Install flowplayer inside the container. This must be placed
-		after the container element. -->
-		<script language="JavaScript">
-			flowplayer("player", "flowplayer-3.2.2.swf");
-		</script>
+	<!-- Description line below title. -->
+	<div class="description">
+		Autonomous steering behaviours and simple terrain generation for Panda3D.
+	</div>
 
-		<p><b>PandaSteer</b> is an <i>autonomous steering behaviours</i>
-		library for the game engine <a
-		href="http://www.panda3d.org/">Panda3D</a>. It gives characters in
-		Panda3D animations and games the ability to navigate a virtual world
-		smoothly and convincingly. For example, to get from A to B while
-		avoiding both static and moving obstacles, to chase or evade another
-		character, to follow a path, etc. The video playing above shows a
-		sequence of scenes from a small demonstration of some of PandaSteer's
-		steering behaviours.</p>
+	<!-- 2. The HTML element that will contain the video player. -->
+	<p><a
+		href="screencast.flv"
+		style="display:block;width:600px;height:456px;margin:auto;"
+		id="player">
+	</a></p>
+	<!-- 3. Install flowplayer inside the container. This must be placed
+	after the container element. -->
+	<script type="text/javaScript">
+		flowplayer("player", "flowplayer-3.2.2.swf");
+	</script>
 
-		<p>PandaSteer is based on Craig Reynolds' GDC 1999 paper <a
-		href="http://www.red3d.com/cwr/steer/">Steering Behaviours For
-		Autonomous Characters</a>.
-		The 3D models included with the download are from the free
-		set that you can download from <a
-		href="http://www.panda3d.org/">panda3d.org</a>.</p>
+	<!-- Main page text begins. -->
+	<p><b>PandaSteer</b> is an <i>autonomous steering behaviours</i>
+	library for the game engine <a
+	href="http://www.panda3d.org/">Panda3D</a>. It gives characters
+	in Panda3D animations and games the ability to navigate a virtual
+	world smoothly and convincingly. For example, to get from A to B
+	while avoiding both static and moving obstacles, to chase or evade
+	another character, to follow a path, etc. The video playing above
+	shows a sequence of scenes from a small demonstration of some of
+	PandaSteer's steering behaviours.</p>
+
+	<p>PandaSteer is based on Craig Reynolds' GDC 1999 paper <a
+	href="http://www.red3d.com/cwr/steer/">Steering Behaviours For
+	Autonomous Characters</a>.  The 3D models included with the
+	download are from the free set that you can download from <a
+	href="http://www.panda3d.org/">panda3d.org</a>.</p>
 
 
-		<p>PandaSteer also includes a simple terrain generator that I
-		wrote in order to demonstrate PandaSteer. It uses the diamond-square
-		algorithm to generate the terrain and Perlin noise to place the
-		trees:</p>
+	<p>PandaSteer also includes a simple terrain generator that I wrote
+	in order to demonstrate PandaSteer. It uses the diamond-square
+	algorithm to generate the terrain and Perlin noise to place the
+	trees:</p>
 
-		<p><img src="scrot2.png" title="A screenshot of some terrain generated by PandaSteer's simple terrain generator." alt="A screenshot of some terrain generated by PandaSteer's simple terrain generator."/></p>
+	<p><img src="scrot2.png"
+			title="A screenshot of some terrain generated by PandaSteer's simple terrain generator."
+			alt="A screenshot of some terrain generated by PandaSteer's simple terrain generator.">
+	</p>
 
 	<h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="http://github.com/seanh/PandaSteer/zipball/master">zip</a> or
-      <a href="http://github.com/seanh/PandaSteer/tarball/master">tar</a> formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/seanh/PandaSteer</pre>
-    </p>
 
-      <p>Browse the source code on GitHub : <a href="http://github.com/seanh/PandaSteer">seanh/PandaSteer</a>.
-    </p>
+	<p>You can download this project in either
+	  <a href="http://github.com/seanh/PandaSteer/zipball/master">zip</a> or
+	  <a href="http://github.com/seanh/PandaSteer/tarball/master">tar</a> formats.
+	</p>
 
-<h2>Install</h2>
-<p>PandaSteer should work on Windows, Linux, or anywhere that Panda3D can be installed. First install <a href="http://www.panda3d.org/">Panda3D</a>, then download PandaSteer and run <code>pandaSteer.py</code> for a plugin-based steering behaviours demo. Run <code>terrain.py</code> for a demo of the terrain generator. Run <code>scene.py</code> for a demo 'game' scene combining the terrain generator and steering behaviours.</p>
+	<p>You can also clone the project with <a href="http://git-scm.com">Git</a>
+	by running:</p>
 
-<h2>License</h2>
-<p>PandaSteer is free software; you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation; either version 2 of the License, or
-(at your option) any later version.
+	<pre>$ git clone git://github.com/seanh/PandaSteer</pre>
 
-PandaSteer is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
+	<p>Browse the source code on GitHub : <a
+	href="http://github.com/seanh/PandaSteer">seanh/PandaSteer</a>.
+	</p>
 
-You should have received a copy of the GNU General Public License
-along with PandaSteer; if not, write to the Free Software
-Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA</p>
+	<h2>Install</h2>
 
-<h2>Authors</h2>
+	<p>PandaSteer should work on Windows, Linux, or anywhere that
+	Panda3D can be installed. First install <a
+	href="http://www.panda3d.org/">Panda3D</a>, then download
+	PandaSteer and run <code>pandaSteer.py</code> for a plugin-based
+	steering behaviours demo. Run <code>terrain.py</code> for a demo of
+	the terrain generator. Run <code>scene.py</code> for a demo 'game'
+	scene combining the terrain generator and steering behaviours.</p>
 
-<p>seanh, with contributions from Panda3D forum members ynjh_jo,
-Thomas_egi, pro-rsoft, drwr, cyan, mavasher, Ffeuuell, zuck and
-astelix.</p>
+	<h2>License</h2>
 
-  </div>
+	<p>PandaSteer is free software; you can redistribute it and/or
+	modify it under the terms of the GNU General Public License as
+	published by the Free Software Foundation; either version 2 of the
+	License, or (at your option) any later version. PandaSteer is
+	distributed in the hope that it will be useful, but WITHOUT ANY
+	WARRANTY; without even the implied warranty of MERCHANTABILITY or
+	FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public
+	License for more details. You should have received a copy of the GNU
+	General Public License along with PandaSteer; if not, write to the
+	Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston,
+	MA  02110-1301  USA</p>
+
+	<h2>Authors</h2>
+
+	<p>seanh, with contributions from Panda3D forum members ynjh_jo,
+	Thomas_egi, pro-rsoft, drwr, cyan, mavasher, Ffeuuell, zuck and
+	astelix.</p>
+
+</div><!-- #container -->
+
 </body>
 </html>
