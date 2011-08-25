@@ -8,7 +8,7 @@ noise. This code requires Panda3D to be installed on your system. The 3D
 models included with the download are from the free set that you
 can download from panda3d.org.
 
-Video and screenshots: <http://homepages.inf.ed.ac.uk/s0094060/panda3d/>
+Video and screenshots: <http://seanh.sdfeu.org/pandasteer/>
 
 # Instructions
 
